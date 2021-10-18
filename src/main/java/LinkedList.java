@@ -6,7 +6,7 @@ public class LinkedList<T> {
 
     public void append(T val) {
         if (head == null) {
-            head = new Node<T>(val);
+            head = new Node<>(val);
         } else {
             Node<T> cur = head;
             while (cur.getNext() != null) {
@@ -103,10 +103,9 @@ public class LinkedList<T> {
     }
 
 
-    public T[] toArray() {
+    public T[] toArray(Class<T> clazz) {
         int sizeOfArray = size();
-        //TODO:
-        T[] tempArray =  (T[])Array.newInstance(this.head.getData().getClass().getComponentType(), sizeOfArray);
+        T[] tempArray =  (T[])Array.newInstance(clazz, sizeOfArray);
         for (int i = 0; i < sizeOfArray; i++) {
             tempArray[i] = get(i);
         }
