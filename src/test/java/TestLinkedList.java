@@ -9,9 +9,9 @@ public class TestLinkedList {
         LinkedList<Integer> ll = new LinkedList<>();
         ll.append(10);
         ll.append(20);
-        Integer[] arr = ll.toArray();
+        Integer[] arr = ll.toArray(Integer.class);
 
-        assertEquals(new Integer[]{10, 20}, arr);
+        assertArrayEquals(new Integer[]{10, 20}, arr);
 
     }
 
