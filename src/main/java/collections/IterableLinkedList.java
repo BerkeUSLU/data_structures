@@ -203,6 +203,11 @@ public class IterableLinkedList<T> implements Iterable<T> {
         IterableLinkedList<Integer> ll = new IterableLinkedList<>();
         ll.append(10);
         ll.append(20);
+        ll.get(0);
+
+        for (int i = 0; i < ll.size(); i++) {
+            System.out.println(ll.get(i));
+        }
 
         for(Integer i : ll){
             System.out.println(i);
